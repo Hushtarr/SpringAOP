@@ -7,7 +7,8 @@ import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component("vehicleBean")@Getter
+@Component("vehicleBean")
+@Getter
 @Setter
 @ToString
 public class Vehicle {

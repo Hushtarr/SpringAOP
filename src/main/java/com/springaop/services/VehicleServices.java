@@ -5,7 +5,6 @@ import com.springaop.interfaces.Speakers;
 import com.springaop.interfaces.Tyres;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Component;
 @Setter
 public class VehicleServices {
 
-    @Autowired
     private final Speakers speakers;
     private final Tyres tyres;
 
@@ -25,12 +23,12 @@ public class VehicleServices {
         this.tyres = tyres;
     }
 
-    public void playMusic(){
+    public void playMusic() {
         String music = speakers.makeSound();
         System.out.println(music);
     }
 
-    public void moveVehicle(){
+    public void moveVehicle() {
         String status = tyres.rotate();
         System.out.println(status);
     }
